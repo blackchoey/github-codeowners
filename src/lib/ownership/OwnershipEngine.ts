@@ -46,7 +46,9 @@ export class OwnershipEngine {
       const owned: FileOwnershipMatcher[] = [];
 
       for (const line of lines) {
+        console.log(`Processing ${line}`);
         if (!line || line.startsWith('#')) {
+          console.log(`Skip`);
           continue;
         }
 
